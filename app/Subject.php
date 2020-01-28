@@ -17,4 +17,14 @@ class Subject extends Model
     {
         return $this->hasMany(Chapter::class);
     }
+
+    public function questions()
+    {
+        return $this->hasMany(Question::class);
+    }
+
+    public function exams()
+    {
+        return $this->hasMany(Exam::class);
+    }
 }

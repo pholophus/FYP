@@ -23,7 +23,7 @@ class SubjectController extends Controller
 
         $subject = auth()->user()->subjects()->create($data);
 
-        return redirect('/subjects/'.$subject->id);
+        return redirect('/home');
     }
 
     public function show(Subject $subject)

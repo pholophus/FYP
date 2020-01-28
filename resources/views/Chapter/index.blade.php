@@ -17,14 +17,17 @@
 
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="btn btn-sm btn-outline-success mr-5" href="/chapters/{{ $chapter->id}}/edit">Edit</a>
+                            <a class="btn btn-sm btn-outline-primary mr-5" href="/questions/{{$chapter->id}}/chapters">View Questions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-sm btn-outline-success mr-5" href="/questions/{{ $chapter->id }}/edit">Edit</a>
                         </li>
                         <li class="nav-item">
                             <form action="/chapters/{{$chapter->id}}" method="post">
                                 @method('DELETE')
                                 @csrf
 
-                                <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                                <button type="submit" class="btn btn-sm btn-outline-danger mr-5">Delete</button>
                             </form>
                         </li>
                     </ul>
@@ -33,7 +36,15 @@
                 @endforeach
                 
                 <div class="card-body">
-                    <a class="btn btn-outline-primary " href="/home">Go Back</a>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="btn btn- btn-outline-primary mr-4" href="/chapters/{{$subject->id}}/create">Add Chapter</a>
+                        </li>
+                        <li>
+                            <a class="btn btn-outline-primary " href="/home">Go Back</a>
+                        </li>
+                    </ul>
+                    
                 </div>
             </div>
         </div>

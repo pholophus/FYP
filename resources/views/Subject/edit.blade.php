@@ -32,7 +32,15 @@
                             @enderror
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Edit Subject</button>
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <button type="submit" class="btn btn-success mr-5">Edit Subject</button>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/home" class="btn btn-primary">Cancel</a>
+                            </li>
+                        </ul>
+                        
                     </form>
                 </div>
             </div>

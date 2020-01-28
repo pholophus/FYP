@@ -26,21 +26,22 @@
                     <div class="card-footer">
                         <ul class="nav">
                             <li class="nav-item">
-                                <a class="btn btn-sm btn-outline-success mr-5" href="/subjects/{{ $subject->id}}/edit">Edit</a>
+                                <a class="btn btn-sm btn-outline-success mr-4" href="/subjects/{{ $subject->id}}/edit">Edit</a>
                             </li>
                             <li class="nav-item">
                                 <form action="/subjects/{{$subject->id}}" method="post">
                                     @method('DELETE')
                                     @csrf
 
-                                    <button type="submit" class="btn btn-sm btn-outline-danger mr-5">Delete</button>
+                                    <button type="submit" class="btn btn-sm btn-outline-danger mr-4">Delete</button>
                                 </form>
                             </li>
+                            
                             <li class="nav-item">
-                                <a class="btn btn-sm btn-outline-primary mr-5" href="/chapters/{{$subject->id}}/create">Add Chapter</a>
+                                <a class="btn btn-sm btn-outline-primary mr-4" href="/chapters/{{$subject->id}}">View Chapter</a>
                             </li>
                             <li class="nav-item">
-                                <a class="btn btn-sm btn-outline-primary " href="/chapters/{{$subject->id}}">View Chapter</a>
+                                <a class="btn btn-sm btn-outline-primary " href="/questions/{{$subject->id}}/subject">View Questions</a>
                             </li>
                         </ul>
                     </div>
