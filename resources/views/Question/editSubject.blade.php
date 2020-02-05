@@ -8,7 +8,7 @@
                 <div class="card-header">Edit question</div>
 
                 <div class="card-body">
-                    <form action="/questions/{{$question->id}}/subjects" method="post">
+                    <form action="/questions/{{$question->id}}/subject" method="post">
                     
                         @method('PATCH')
                         @csrf

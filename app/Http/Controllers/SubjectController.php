@@ -47,7 +47,7 @@ class SubjectController extends Controller
 
         $subject->update($data);
 
-        return redirect('/subjects/'.$subject->id);
+        return redirect('/home');
     }
 
     public function destroy(Subject $subject)

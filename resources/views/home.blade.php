@@ -41,7 +41,10 @@
                                 <a class="btn btn-sm btn-outline-primary mr-4" href="/chapters/{{$subject->id}}">View Chapter</a>
                             </li>
                             <li class="nav-item">
-                                <a class="btn btn-sm btn-outline-primary " href="/questions/{{$subject->id}}/subject">View Questions</a>
+                                <a class="btn btn-sm btn-outline-primary mr-4" href="/questions/{{$subject->id}}/subject">View Questions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-sm btn-outline-primary " href="/exams/{{$subject->id}}">View Exam</a>
                             </li>
                         </ul>
                     </div>

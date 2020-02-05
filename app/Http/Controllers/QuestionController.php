@@ -11,7 +11,11 @@ class QuestionController extends Controller
 {
     public function indexSubject(Subject $subject)
     {
-        return view('question.indexSubject', compact('subject'));
+        //dd($subject->id);
+        $ids = Subject::find($subject->id)->questions->pluck('id');
+        $questions = $subject->questions()->with('chapter')->find($ids);
+
+        return view('question.indexSubject', compact('subject','questions','question'));
     }
 
     public function indexChapter(Chapter $chapter)
@@ -40,7 +44,9 @@ class QuestionController extends Controller
 
         $question = $subject->questions()->create($data);
 
-        return redirect('questions/'.$question->subject_id);
+        //dd($question);
+
+        return redirect('questions/'.$question->subject_id.'/subject');
     }
 
     public function storeChapter(Chapter $chapter)
@@ -91,7 +97,7 @@ class QuestionController extends Controller
  
         $question->update($data);
 
-        return redirect('questions/'.$question->subject_id);
+        return redirect('questions/'.$question->subject_id.'/subject');
     }
 
     public function updateChapter(Question $question)
@@ -119,6 +125,6 @@ class QuestionController extends Controller
     {
         $question->delete();
 
-        return redirect('questions/'.$question->subject_id.'/chapters');
+        return redirect('questions/'.$question->chapter_id.'/chapters');
     }
 }

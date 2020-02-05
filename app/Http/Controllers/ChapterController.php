@@ -11,6 +11,9 @@ class ChapterController extends Controller
     public function index(Subject $subject)
     {
         $chapters = $subject->chapters;
+        //$chapter = new Chapter;
+        //dd($chapter::find(1)->subject->subject);
+        //dd($chapter::find(1));
         return view('chapter.index', compact('chapters','subject'));
     }
 

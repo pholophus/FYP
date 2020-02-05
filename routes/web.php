@@ -49,4 +49,12 @@ Route::patch('/questions/{question}/chapters','QuestionController@updateChapter'
 Route::delete('/questions/{question}/subject','QuestionController@destroySubject');
 Route::delete('/questions/{question}/chapters','QuestionController@destroyChapter');
 
-
+Route::get('/exams/{subject}','ExamController@index');
+Route::get('/exams/{subject}/create', 'ExamController@create');
+Route::get('/exams/{subject}/requirement', 'ExamController@requirement');
+Route::post('/exams/{subject}/generate', 'ExamController@generate');
+Route::post('/exams/{subject}/product', 'ExamController@product');
+Route::post('/exams/{subject}/store', 'ExamController@store');
+Route::get('/generate-docx/{exam}', 'ExamController@word');
+Route::get('/exams/{exam}/show','ExamController@show');
+Route::delete('/exams/{exam}','ExamController@destroy');

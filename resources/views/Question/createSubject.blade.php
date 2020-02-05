@@ -8,7 +8,7 @@
                 <div class="card-header">Add question</div>
 
                 <div class="card-body">
-                    <form action="/questions/{{$subject->id}}" method="post">
+                    <form action="/questions/{{$subject->id}}/subject" method="post">
                     
                         @csrf
                         <div class="form-group">
@@ -58,8 +58,6 @@
                             <small class="text-danger">{{ $message }}</small>
                             @enderror
                         </div>
-
-
 
                         <button type="submit" class="btn btn-primary">Add question</button>
                     </form>

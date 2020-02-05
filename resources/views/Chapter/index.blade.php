@@ -20,7 +20,7 @@
                             <a class="btn btn-sm btn-outline-primary mr-5" href="/questions/{{$chapter->id}}/chapters">View Questions</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-sm btn-outline-success mr-5" href="/questions/{{ $chapter->id }}/edit">Edit</a>
+                            <a class="btn btn-sm btn-outline-success mr-5" href="/chapters/{{ $chapter->id }}/edit">Edit</a>
                         </li>
                         <li class="nav-item">
                             <form action="/chapters/{{$chapter->id}}" method="post">
